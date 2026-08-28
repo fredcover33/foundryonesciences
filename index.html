@@ -1608,7 +1608,11 @@
     .hero-right { padding: 24px 1.5rem 64px; }
     .hero-divider { display: none; }
     .logo-img { height: 245px; }
-    .mission-grid, .engine-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .mission-grid, .engine-grid, .about-grid, .contact-grid, .hp-hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .hp-layer-grid { grid-template-columns: 1fr; }
+    .hp-deploy-grid { grid-template-columns: 1fr; }
+    .hp-deploy-card { border-right: none; border-bottom: 1px solid var(--border); }
+    .hp-deploy-card:last-child { border-bottom: none; }
     .products-grid { grid-template-columns: 1fr; }
     .tracks-grid { grid-template-columns: 1fr; }
     .doc-ctas { flex-direction: column; align-items: stretch; }
@@ -1746,6 +1750,10 @@
 
   @media (max-width: 640px) {
     .mission-stats { grid-template-columns: 1fr; }
+    .hp-stats { grid-template-columns: 1fr 1fr; }
+    .hp-stat { border-bottom: 1px solid var(--border); }
+    .hp-stat:nth-child(2n) { border-right: none; }
+    .hp-stat:nth-last-child(-n+2) { border-bottom: none; }
     .product-modal { grid-template-columns: 1fr; }
     .modal-img-panel { border-right: none; border-bottom: 1px solid var(--border); min-height: 240px; }
   }
