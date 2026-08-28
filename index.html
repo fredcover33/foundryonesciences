@@ -668,6 +668,47 @@
   }
  
   /* ─── AUDIENCE TRACKS ─── */
+  /* ─── CLINICAL DOCUMENTATION ─── */
+  #documentation {
+    padding: 7rem 0;
+  }
+
+  .doc-intro {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: var(--muted);
+    max-width: 820px;
+  }
+
+  .doc-pricing {
+    margin-top: 3.5rem;
+    padding: 1.8rem;
+    border: 1px solid var(--border);
+    background: var(--glow);
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(1rem, 1.7vw, 1.35rem);
+    line-height: 1.6;
+    color: var(--gold2);
+  }
+
+  .doc-ctas {
+    margin-top: 2.8rem;
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .doc-fineprint {
+    margin-top: 1.6rem;
+    font-size: 0.72rem;
+    line-height: 1.75;
+    color: var(--muted);
+    opacity: 0.8;
+    max-width: 680px;
+  }
+
   #audiences {
     padding: 7rem 0;
   }
@@ -1570,6 +1611,8 @@
     .mission-grid, .engine-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .products-grid { grid-template-columns: 1fr; }
     .tracks-grid { grid-template-columns: 1fr; }
+    .doc-ctas { flex-direction: column; align-items: stretch; }
+    .doc-ctas .btn-primary, .doc-ctas .btn-outline { text-align: center; }
     footer { flex-direction: column; gap: 1rem; align-items: flex-start; }
   }
 
@@ -1718,6 +1761,7 @@
     <span class="nav-tagline">...&nbsp; we have not stopped looking</span>
   </div>
   <ul class="nav-links">
+    <li><a href="#documentation">Documentation</a></li>
     <li><a href="#engine">The Engine</a></li>
     <li><a href="#products">Products</a></li>
     <li><a href="#audiences">For You</a></li>
@@ -1765,6 +1809,43 @@
       <div class="logo-wordmark">Foundry One Sciences</div>
       <div class="logo-tagline">...&nbsp;&nbsp;we have not stopped looking</div>
     </div>
+  </div>
+</section>
+ 
+<!-- ─── CLINICAL DOCUMENTATION ─── -->
+<section id="documentation">
+  <div class="section-inner">
+    <div class="section-label reveal">MRS Engine · Clinical Documentation</div>
+    <h2 class="section-title reveal">Your notes carry your practice.<br><em>We make them carry their weight.</em></h2>
+    <div class="divider reveal"></div>
+    <p class="doc-intro reveal">The MRS Engine's documentation intelligence platform reviews, structures, and strengthens clinical documentation for independent physician practices — the offices too small for enterprise AI and too busy for another dashboard. Documentation goes in the way you already write it. It comes back organized, consistent, and ready to stand behind.</p>
+
+    <div class="tracks-grid">
+      <div class="track-card reveal">
+        <div class="track-icon">🏥</div>
+        <div class="track-title">Built for the independent office</div>
+        <div class="track-desc">Solo and small-group practices are the design center, not an afterthought. No IT department required, no workflow rebuilt around software.</div>
+      </div>
+      <div class="track-card reveal">
+        <div class="track-icon">⚙️</div>
+        <div class="track-title">A seven-stage review pipeline</div>
+        <div class="track-desc">Every document passes through a structured, multi-stage intelligence review — with human judgment as part of the design, not a disclaimer.</div>
+      </div>
+      <div class="track-card reveal">
+        <div class="track-icon">🔒</div>
+        <div class="track-title">Your documentation stays yours</div>
+        <div class="track-desc">HIPAA-aligned handling, practice-owned records, and outputs your staff can read without a manual.</div>
+      </div>
+    </div>
+
+    <div class="doc-pricing reveal">Solo &amp; Small Practice — $399/mo · Mid &amp; Large Practice — $599/mo · 12-month terms</div>
+
+    <div class="doc-ctas reveal">
+      <a href="#contact" class="btn-primary" onclick="docContact('MRS Engine — Clinical Documentation')">Request a Physician Demo</a>
+      <a href="#contact" class="btn-outline" onclick="docContact('Referral Partner Program (Billing Agencies)')">Billing agencies: ask about the Referral Partner Program</a>
+    </div>
+
+    <p class="doc-fineprint reveal">MRS Engine supports physician documentation. It does not diagnose, treat, or replace physician judgment.</p>
   </div>
 </section>
  
@@ -2521,9 +2602,11 @@ hpSetMode('ems');
         </div>
         <div class="form-group">
           <label>Product / Area of Interest</label>
-          <select>
+          <select id="contact-topic">
             <option value="" disabled selected>Select topic</option>
             <option>MRS Engine — Platform Licensing</option>
+            <option>MRS Engine — Clinical Documentation</option>
+            <option>Referral Partner Program (Billing Agencies)</option>
             <option>InsuLes™</option>
             <option>Leapsin™</option>
             <option>ZeaCyte™</option>
@@ -2703,6 +2786,16 @@ document.addEventListener('keydown', e => {
   }
 });
 
+// ── Clinical Documentation CTAs → pre-select the contact topic ──────────────
+function docContact(topic) {
+  const sel = document.getElementById('contact-topic');
+  if (!sel) return;
+  const opt = Array.from(sel.options).find(o => o.text === topic);
+  if (!opt) return;
+  sel.selectedIndex = opt.index;
+  sel.dispatchEvent(new Event('change', { bubbles: true }));
+}
+ 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
