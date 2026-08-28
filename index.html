@@ -156,8 +156,8 @@
   }
 
   .logo-img {
-    height: 404px;
-    width: auto;
+    width: min(404px, 100%);
+    height: auto;
     display: block;
     -webkit-mask-image: radial-gradient(ellipse 68% 56% at 50% 50%, black 20%, rgba(0,0,0,0.82) 36%, rgba(0,0,0,0.35) 56%, transparent 74%);
     mask-image: radial-gradient(ellipse 68% 56% at 50% 50%, black 20%, rgba(0,0,0,0.82) 36%, rgba(0,0,0,0.35) 56%, transparent 74%);
@@ -1483,6 +1483,8 @@
     outline: none;
     transition: border-color 0.25s;
     -webkit-appearance: none;
+    width: 100%;
+    min-width: 0;
   }
  
   .form-group input:focus,
@@ -1607,7 +1609,7 @@
     .hero-left { padding: 100px 1.5rem 40px; }
     .hero-right { padding: 24px 1.5rem 64px; }
     .hero-divider { display: none; }
-    .logo-img { height: 245px; }
+    .logo-img { width: min(245px, 100%); }
     .mission-grid, .engine-grid, .about-grid, .contact-grid, .hp-hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .hp-layer-grid { grid-template-columns: 1fr; }
     .hp-deploy-grid { grid-template-columns: 1fr; }
