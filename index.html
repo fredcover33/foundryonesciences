@@ -440,27 +440,28 @@
     position: relative;
     width: min(300px, 100%);
     aspect-ratio: 1;
+    container-type: inline-size;
   }
  
   .suit-node {
     position: absolute;
-    width: 80px;
-    height: 80px;
+    width: 26.667%;
+    height: 26.667%;
     border: 1px solid var(--border);
     background: var(--navy3);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.3rem;
+    gap: 1.6cqw;
     transition: border-color 0.3s;
   }
  
   .suit-node:hover { border-color: var(--gold); }
  
-  .suit-icon { font-size: 1.8rem; }
+  .suit-icon { font-size: max(1rem, 9.6cqw); }
   .suit-label {
-    font-size: 0.52rem;
+    font-size: max(0.45rem, 2.773cqw);
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--muted);
@@ -475,7 +476,7 @@
     position: absolute;
     top:50%; left:50%;
     transform:translate(-50%,-50%);
-    width: 90px; height: 90px;
+    width: 30%; height: 30%;
     border: 1px solid var(--gold);
     background: radial-gradient(circle, rgba(201,165,88,0.15), transparent);
     display: flex;
@@ -486,7 +487,7 @@
  
   .center-label {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 0.7rem;
+    font-size: max(0.6rem, 3.733cqw);
     letter-spacing: 0.1em;
     color: var(--gold);
     text-align: center;
@@ -496,7 +497,7 @@
   .suit-line {
     position: absolute;
     top:50%; left:50%;
-    width: 105px;
+    width: 35%;
     height: 1px;
     background: linear-gradient(to right, var(--gold), transparent);
     transform-origin: left center;
@@ -796,6 +797,10 @@
     align-items: center;
   }
 
+  /* Let the columns shrink below their content-based minimum on narrow
+     viewports; without this the grid item auto-minimum holds the track open. */
+  .hp-hero-grid > * { min-width: 0; }
+
   .hp-eyebrow {
     font-size: 0.62rem;
     letter-spacing: 0.38em;
@@ -914,6 +919,7 @@
 
   .hp-tab {
     flex: 1;
+    min-width: 0;
     padding: 0.6rem 0.8rem;
     border: 1px solid var(--border);
     background: transparent;
@@ -1195,6 +1201,7 @@
 
   .hp-npi-input {
     width: 100%;
+    min-width: 0;
     padding: 0.7rem 0.9rem;
     background: var(--navy3);
     border: 1px solid var(--border);
@@ -1532,6 +1539,8 @@
   .contact-item-val {
     font-size: 0.85rem;
     color: var(--muted);
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
  
   /* ─── FOOTER ─── */
@@ -1758,6 +1767,20 @@
     .hp-stat:nth-last-child(-n+2) { border-bottom: none; }
     .product-modal { grid-template-columns: 1fr; }
     .modal-img-panel { border-right: none; border-bottom: 1px solid var(--border); min-height: 240px; }
+  }
+
+  /* Below the narrowest shipping viewport (280px Galaxy Fold cover screen).
+     Everything else is fluid; what remains here is type, padding and
+     two-up layouts that no longer fit. */
+  @media (max-width: 279px) {
+    .hero-title { font-size: 2.4rem; }
+    .btn-primary, .btn-outline { padding: 0.85rem 1.1rem; letter-spacing: 0.12em; }
+    .hp-stats { grid-template-columns: 1fr; }
+    .hp-stat { border-right: none; }
+    .hp-stat:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); }
+    .hp-stat:last-child { border-bottom: none; }
+    .hp-mode-tabs { flex-direction: column; }
+    .track-card, .hp-deploy-card { padding: 1.4rem 1.2rem; }
   }
 
 </style>
