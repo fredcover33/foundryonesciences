@@ -1,0 +1,9 @@
+[probe]
+trades_file_size_guard_gb = 6.0      # GUARD: do not download a trades file
+                                     # larger than this; stop and report
+trades_parse_sample_rows = 2000000   # rows to parse when measuring rate
+target_replay_sessions = 60          # used only in Step 8 arithmetic
+
+[paths]
+download_dir = "flatfiles"
+store_path   = "data/picker.sqlite"
