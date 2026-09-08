@@ -1,8 +1,8 @@
 [probe]
-trades_file_size_guard_gb = 6.0      # GUARD: do not download a trades file
-                                     # larger than this; stop and report
-trades_parse_sample_rows = 2000000   # rows to parse when measuring rate
-target_replay_sessions = 60          # used only in Step 8 arithmetic
+trades_file_size_guard_gb = 6.0      # GUARD: refuse to download a trades
+                                     # file larger than this
+trades_stream_sample_seconds = 60    # wall-clock cap on the streaming test
+target_replay_sessions = 60
 
 [paths]
 download_dir = "flatfiles"

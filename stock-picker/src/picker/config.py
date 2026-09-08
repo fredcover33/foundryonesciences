@@ -15,7 +15,7 @@ from typing import Any
 # Dotted paths of every key config.toml must define. No key has a default.
 REQUIRED_KEYS: tuple[str, ...] = (
     "probe.trades_file_size_guard_gb",
-    "probe.trades_parse_sample_rows",
+    "probe.trades_stream_sample_seconds",
     "probe.target_replay_sessions",
     "paths.download_dir",
     "paths.store_path",
@@ -33,7 +33,7 @@ class ConfigMissingKey(Exception):
 @dataclass(frozen=True)
 class Config:
     trades_file_size_guard_gb: float
-    trades_parse_sample_rows: int
+    trades_stream_sample_seconds: int
     target_replay_sessions: int
     download_dir: str
     store_path: str
@@ -57,7 +57,7 @@ def load_config_data(data: dict[str, Any]) -> Config:
         _lookup(data, key)
     return Config(
         trades_file_size_guard_gb=float(_lookup(data, "probe.trades_file_size_guard_gb")),
-        trades_parse_sample_rows=int(_lookup(data, "probe.trades_parse_sample_rows")),
+        trades_stream_sample_seconds=int(_lookup(data, "probe.trades_stream_sample_seconds")),
         target_replay_sessions=int(_lookup(data, "probe.target_replay_sessions")),
         download_dir=str(_lookup(data, "paths.download_dir")),
         store_path=str(_lookup(data, "paths.store_path")),
