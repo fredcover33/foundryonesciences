@@ -2,3 +2,5 @@
 .venv/
 data/
 flatfiles/
+__pycache__/
+*.pyc
