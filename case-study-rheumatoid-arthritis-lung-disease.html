@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Seropositive RA for 11 years, then 4 months of progressive dyspnea and new lower-lobe reticulation. What the published research surfaced: RA-ILD, three drug suspects, and the test that settles it.">
+<meta property="og:title" content="Rheumatoid Arthritis With New Interstitial Lung Disease: Case Study | MRS Engine">
+<meta property="og:description" content="Seropositive RA for 11 years, then 4 months of progressive dyspnea and new lower-lobe reticulation. What the published research surfaced: RA-ILD, three drug suspects, and the test that settles it.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://foundryonesciences.com/case-study-rheumatoid-arthritis-lung-disease.html">
+<title>Rheumatoid Arthritis With New Interstitial Lung Disease: Case Study | MRS Engine</title>
+<link rel="canonical" href="https://foundryonesciences.com/case-study-rheumatoid-arthritis-lung-disease.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:    #080d1a;
+    --navy2:   #0d1426;
+    --navy3:   #111c35;
+    --gold:    #c9a558;
+    --gold2:   #e2c07a;
+    --white:   #f5f2ec;
+    --muted:   #8a96b0;
+    --border:  rgba(201,165,88,0.18);
+    --glow:    rgba(201,165,88,0.08);
+  }
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV (same as home page) ─── */
+  nav {
+    position: fixed; top:0; left:0; right:0; z-index: 100;
+    padding: 1.4rem 4rem;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(8,13,26,0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-brand { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.05rem;
+    letter-spacing: 0.28em; color: var(--white); text-transform: uppercase;
+  }
+  .nav-tagline {
+    font-family: 'Crimson Pro', serif; font-style: italic; font-size: 0.62rem;
+    color: var(--gold); letter-spacing: 0.08em; text-align: right; margin-top: 0.2rem;
+  }
+  .nav-links { display: flex; gap: 2.8rem; list-style: none; }
+  .nav-links a {
+    color: var(--muted); text-decoration: none; font-size: 0.72rem;
+    letter-spacing: 0.18em; text-transform: uppercase; transition: color 0.25s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+
+  /* ─── SHARED ─── */
+  .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 4rem; position: relative; z-index: 1; }
+  .section-label {
+    font-size: 0.62rem; letter-spacing: 0.38em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif; font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.1; color: var(--white);
+  }
+  .section-title em { font-style: italic; color: var(--gold2); }
+  .divider { width: 48px; height: 1px; background: var(--gold); margin: 1.8rem 0; opacity: 0.6; }
+  .btn-primary, .btn-outline {
+    display: inline-block; padding: 0.85rem 2.2rem;
+    font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.2em;
+    text-transform: uppercase; text-decoration: none; cursor: pointer;
+    transition: background 0.25s, border-color 0.25s, color 0.25s, transform 0.2s;
+  }
+  .btn-primary { background: var(--gold); color: var(--navy); font-weight: 500; border: none; }
+  .btn-primary:hover { background: var(--gold2); transform: translateY(-2px); }
+  .btn-outline { background: transparent; color: var(--gold); font-weight: 400; border: 1px solid var(--border); }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold2); transform: translateY(-2px); }
+  p.body {
+    font-family: 'Crimson Pro', serif; font-size: 1.22rem; line-height: 1.75;
+    color: rgba(245,242,236,0.82); max-width: 760px;
+  }
+  p.body + p.body { margin-top: 1.1rem; }
+
+  /* ─── HERO ─── */
+  #cert-hero { padding: 150px 0 70px; position: relative; }
+  #cert-hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 55% at 70% 40%, rgba(201,165,88,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-sub {
+    font-family: 'Crimson Pro', serif; font-style: italic; font-size: 1.35rem;
+    color: rgba(245,242,236,0.75); margin-top: 1.2rem; max-width: 680px; line-height: 1.6;
+  }
+
+  /* ─── VIDEO ─── */
+  .video-frame {
+    margin-top: 3rem; border: 1px solid var(--border); background: var(--navy2);
+    padding: 10px; max-width: 980px;
+  }
+  .video-frame video { display: block; width: 100%; height: auto; background: #000; }
+  .video-caption {
+    margin-top: 0.9rem; font-size: 0.72rem; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--muted);
+  }
+
+  /* ─── WHAT COMPANION DOES ─── */
+  section.band { padding: 90px 0; border-top: 1px solid var(--border); }
+
+  /* ─── LIST ─── */
+  .list-tools { display: flex; gap: 1rem; align-items: center; margin: 2rem 0 1.4rem; flex-wrap: wrap; }
+  .list-tools[hidden] { display: none; }
+  .list-tools label { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+  .list-tools select {
+    background: var(--navy2); color: var(--white); border: 1px solid var(--border);
+    padding: 0.6rem 1rem; font-family: 'Jost', sans-serif; font-size: 0.9rem;
+  }
+  table.agencies { width: 100%; max-width: 980px; border-collapse: collapse; }
+  table.agencies th {
+    text-align: left; font-weight: 400; font-size: 0.66rem; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--gold); padding: 0.9rem 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  table.agencies td {
+    padding: 1rem; border-bottom: 1px solid rgba(201,165,88,0.08);
+    font-size: 1rem; color: rgba(245,242,236,0.88);
+  }
+  .list-note {
+    max-width: 980px; padding: 2rem; border: 1px dashed var(--border);
+    font-family: 'Crimson Pro', serif; font-style: italic; font-size: 1.15rem;
+    color: rgba(245,242,236,0.75);
+  }
+  .list-note.error { border-color: rgba(220,120,100,0.6); color: #f0b4a6; font-style: normal; }
+
+  /* ─── CTA CARDS ─── */
+  .cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; max-width: 980px; }
+  .cta-card { border: 1px solid var(--border); background: var(--navy2); padding: 2.2rem; }
+  .cta-card .who { font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); }
+  .cta-card h3 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.7rem;
+    margin: 0.6rem 0 0.8rem; color: var(--white);
+  }
+  .cta-card p {
+    font-family: 'Crimson Pro', serif; font-size: 1.08rem; line-height: 1.65;
+    color: rgba(245,242,236,0.78); margin-bottom: 1.6rem;
+  }
+
+  /* ─── FOOTER ─── */
+  .disclaimer {
+    max-width: 980px; margin-top: 3rem; font-size: 0.78rem; line-height: 1.6;
+    color: var(--muted); opacity: 0.85;
+  }
+  footer {
+    padding: 2.5rem 4rem; border-top: 1px solid var(--border); margin-top: 90px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .footer-brand { display: flex; flex-direction: column; }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 0.85rem;
+    letter-spacing: 0.28em; text-transform: uppercase; color: var(--white);
+  }
+  .footer-tagline {
+    font-family: 'Crimson Pro', serif; font-style: italic; font-size: 0.62rem;
+    color: var(--gold); text-align: right; margin-top: 0.2rem;
+  }
+  .footer-copy { font-size: 0.65rem; letter-spacing: 0.1em; color: var(--muted); opacity: 0.5; }
+
+  @media (max-width: 900px) {
+    nav { padding: 1.2rem 1.5rem; }
+    .nav-links { display: none; }
+    .section-inner { padding: 0 1.5rem; }
+    #cert-hero { padding: 120px 0 50px; }
+    .cta-grid { grid-template-columns: 1fr; }
+    table.agencies th:nth-child(4), table.agencies td:nth-child(4) { display: none; }
+    footer { flex-direction: column; gap: 1rem; padding: 2rem 1.5rem; }
+  }
+</style>
+
+<style>
+  .case-flag { display:inline-block; margin-top:1.6rem; padding:0.55rem 1rem; border:1px solid var(--border);
+    font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); }
+  .cn-pages { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1.2rem; margin-top:2rem; }
+  .cn-pages img { width:100%; height:auto; display:block; border:1px solid var(--border); box-shadow:0 8px 28px rgba(0,0,0,0.35); }
+  .cn-pages a:hover img { border-color:var(--gold); }
+  .cn-caption { margin-top:1rem; margin-bottom:3rem; font-size:0.85rem; color:var(--muted); }
+  .case-box { max-width:880px; margin-top:2rem; padding:1.8rem 2rem; border-left:2px solid var(--gold);
+    background:var(--navy2); font-family:'Crimson Pro',serif; font-size:1.2rem; line-height:1.7; color:rgba(245,242,236,0.88); }
+  ul.points { list-style:none; max-width:880px; margin-top:1.4rem; }
+  ul.points li { position:relative; padding-left:1.6rem; margin-bottom:1.1rem;
+    font-family:'Crimson Pro',serif; font-size:1.18rem; line-height:1.7; color:rgba(245,242,236,0.84); }
+  ul.points li::before { content:''; position:absolute; left:0; top:0.75rem; width:8px; height:1px; background:var(--gold); }
+  ul.points li strong { color:var(--gold2); font-weight:400; }
+  ol.sources { max-width:880px; margin-top:1.4rem; padding-left:1.4rem; }
+  ol.sources li { margin-bottom:0.9rem; font-size:0.98rem; line-height:1.6; color:rgba(245,242,236,0.82); }
+  ol.sources a { color:var(--gold); text-decoration:none; border-bottom:1px solid var(--border); }
+  ol.sources a:hover { color:var(--gold2); }
+  .case-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:2.5rem; }
+  .case-card { display:block; text-decoration:none; border:1px solid var(--border); background:var(--navy2);
+    padding:2rem; transition:border-color 0.25s, transform 0.2s; }
+  .case-card:hover { border-color:var(--gold); transform:translateY(-3px); }
+  .case-card .who { font-size:0.62rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); }
+  .case-card h3 { font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1.55rem; line-height:1.25;
+    color:var(--white); margin:0.7rem 0; }
+  .case-card p { font-family:'Crimson Pro',serif; font-size:1.05rem; line-height:1.6; color:rgba(245,242,236,0.75); }
+  .case-card .more { margin-top:1.2rem; font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); }
+  .other-cases { margin-top:2rem; font-size:0.95rem; color:var(--muted); }
+  .other-cases a { color:var(--gold); text-decoration:none; margin-right:1.4rem; }
+  @media (max-width: 900px) { .case-grid { grid-template-columns:1fr; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Rheumatoid arthritis, and now the lungs are failing",
+  "description": "Seropositive RA for 11 years, then 4 months of progressive dyspnea and new lower-lobe reticulation. What the published research surfaced: RA-ILD, three drug suspects, and the test that settles it.",
+  "url": "https://foundryonesciences.com/case-study-rheumatoid-arthritis-lung-disease.html",
+  "datePublished": "2026-11-14",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Foundry One Sciences",
+    "url": "https://foundryonesciences.com/"
+  }
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">
+    <span class="nav-logo">Foundry One Sciences</span>
+    <span class="nav-tagline">...&nbsp; we have not stopped looking</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#products">Products</a></li>
+    <li><a href="index.html#about">HealthPassport™</a></li>
+    <li><a href="index.html#audiences">For You</a></li>
+    <li><a href="case-studies.html">Case Studies</a></li>
+    <li><a href="certified-agencies.html">Certified Agencies</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="cert-hero">
+  <div class="section-inner">
+    <div class="section-label">Case study · Rheumatology · Pulmonology</div>
+    <h1 class="section-title">Rheumatoid arthritis, and now <em>the lungs are failing.</em></h1>
+    <div class="case-flag">Illustrative case · built from a test case · no real patient</div>
+    <div class="case-box">Rheumatoid arthritis, seropositive, 11 years, on methotrexate and adalimumab, now with 4 months of progressive dyspnea, dry cough and new bilateral lower-lobe reticulation on CT, with quiescent joints.</div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="section-inner">
+    <div class="section-label">What the research surfaced</div>
+    <h2 class="section-title">Read across the specialties, <em>in one place.</em></h2>
+    <div class="divider"></div>
+    <ul class="points">
+      <li><strong>The cause the evidence stands behind: RA-associated interstitial lung disease.</strong> High-titer RF and anti-CCP, 11 years of seropositive disease and a 30-pack-year history give this patient the dominant risk profile. Two large independent studies show seropositive RA carries a ninefold hazard for ILD, with the NSIP subtype tied to seropositivity.</li>
+      <li><strong>Two drug suspects, neither cleared.</strong> Amiodarone (13 months) and nitrofurantoin (6 months) both have the means and the opportunity. Amiodarone is the better documented: it was the most common drug causing ILD in one referral-center series, and the rising TSH, hepatic hyperattenuation and corneal deposits in the record fit systemic accumulation. Nitrofurantoin can cause both acute eosinophilic and subacute fibrosing disease. TMP-SMX (4 months) is a suspect on thinner evidence.</li>
+      <li><strong>Methotrexate has a partial alibi.</strong> A case-control study with international replication found it inversely associated with chronic fibrosing RA-ILD (pooled adjusted odds ratio 0.43). It is not cleared.</li>
+      <li><strong>The pivotal open question is the BAL cell differential.</strong> Dominant eosinophilia would favor drug hypersensitivity; lymphocytosis with a low CD4/CD8 ratio would favor methotrexate pneumonitis or RA-ILD; a mixed neutrophilic-lymphocytic picture would favor fibrotic RA-ILD. The research also notes that a normal BNP does not exclude pulmonary hypertension.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band">
+  <div class="section-inner">
+    <div class="section-label">The next steps the research supports</div>
+    <h2 class="section-title">What would <em>settle it.</em></h2>
+    <div class="divider"></div>
+    <ul class="points">
+      <li>BAL cell differential with eosinophil and lymphocyte percentages and the CD4/CD8 ratio.</li>
+      <li>Myositis antibody panel, to exclude antisynthetase syndrome as another upstream cause.</li>
+      <li>Pulmonary hypertension evaluation: echocardiography, and consideration of right heart catheterization.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band">
+  <div class="section-inner">
+    <div class="section-label">Sources behind it</div>
+    <h2 class="section-title">Every finding <em>points to its paper.</em></h2>
+    <div class="divider"></div>
+    <ol class="sources">
+      <li>Association between rheumatoid arthritis and interstitial lung disease and impact of serologic status: a large-scale longitudinal study. <em>Scientific Reports, 2025.</em> <a href="https://doi.org/10.1038/s41598-025-88323-7" rel="noopener">doi:10.1038/s41598-025-88323-7</a></li>
+      <li>Impact of sex, serostatus, and smoking on risk for rheumatoid arthritis-associated interstitial lung disease subtypes. <em>Arthritis Care &amp; Research, 2024.</em> <a href="https://doi.org/10.1002/acr.25432" rel="noopener">doi:10.1002/acr.25432</a></li>
+      <li>The prevalence and risk factors of rheumatoid arthritis-associated interstitial lung disease: a systematic review and meta-analysis. <em>Annals of Medicine, 2024.</em> <a href="https://doi.org/10.1080/07853890.2024.2332406" rel="noopener">doi:10.1080/07853890.2024.2332406</a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band">
+  <div class="section-inner">
+    <div class="section-label">What the physician receives</div>
+    <h2 class="section-title">The <em>Chart Note.</em></h2>
+    <div class="divider"></div>
+    <p class="body">The case, what the research surfaced, the sources, and the billing signals: 8 in all, 4 RECORD, 3 OPTION and 1 FINDING. RECORD means it's already documented in the chart. OPTION is a step the research supports, sent on only if the physician marks that he ordered or performed it. FINDING is research context, never sent as billable. The physician marks every signal himself and signs.</p>
+    <div class="cn-pages">
+      <a href="assets/chart-notes/chart-note-1a02f066-p1.png" target="_blank" rel="noopener"><img src="assets/chart-notes/chart-note-1a02f066-p1.png" alt="Chart Note page 1 for this test case" loading="lazy" width="918" height="1188"></a>
+      <a href="assets/chart-notes/chart-note-1a02f066-p2.png" target="_blank" rel="noopener"><img src="assets/chart-notes/chart-note-1a02f066-p2.png" alt="Chart Note page 2 for this test case" loading="lazy" width="918" height="1188"></a>
+    </div>
+    <p class="cn-caption">The actual Chart Note from this test case. The physician's NPI is blacked out, and the QR code takes you to foundryonesciences.org. Click a page to open it full size.</p>
+    <div class="cta-grid">
+      <div class="cta-card">
+        <div class="who">For physicians</div>
+        <h3>Try it on your hardest patient</h3>
+        <p>The MRS Engine is a research tool at the patient level. Your first 60 days are a free trial, and we'll walk you through it on a short call.</p>
+        <a class="btn-primary" href="mailto:fredcover@foundryonesciences.com?subject=MRS%20Engine%20%E2%80%94%20Physician%20Demo&body=Your%20name%3A%0APractice%3A%0ASpecialty%3A%0ABest%20number%20to%20reach%20you%3A%0A">Request a Physician Demo</a>
+      </div>
+      <div class="cta-card">
+        <div class="who">More cases</div>
+        <h3>Other case studies</h3>
+        <p class="other-cases" style="margin-top:0"><a href="case-study-decompensated-heart-failure.html" style="display:block;margin-bottom:0.7rem">More congested than last time, with a lower NT-proBNP</a><a href="case-study-breast-cancer-bone-loss.html" style="display:block;margin-bottom:0.7rem">Breast cancer, and a bone treatment quietly being undone</a><a href="case-study-diabetic-kidney-disease-hyperkalemia.html" style="display:block;margin-bottom:0.7rem">The potassium keeps climbing, and no single drug is to blame</a><a href="case-study-copd-cor-pulmonale-polycythemia.html" style="display:block;margin-bottom:0.7rem">COPD, a failing right heart, and blood that&#x27;s too thick</a><a href="case-study-recurrent-stroke-on-anticoagulation.html" style="display:block;margin-bottom:0.7rem">Two strokes in five months, on a blood thinner that was working</a><a href="case-study-refractory-hypothyroidism.html" style="display:block;margin-bottom:0.7rem">The TSH keeps climbing, no matter how high the dose goes</a></p>
+        <a class="btn-outline" href="case-studies.html">All case studies</a>
+      </div>
+    </div>
+    <p class="disclaimer">Illustrative case built from a test case entered by our team; no real patient is described. This page is not medical advice. Billing and coding signals are research-supported documentation opportunities only. All clinical, billing and coding decisions remain the sole professional judgment of the treating physician. Foundry One Sciences LLC does not provide medical, legal or billing advice.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">
+    <span class="footer-logo">Foundry One Sciences</span>
+    <span class="footer-tagline">...&nbsp; we have not stopped looking</span>
+  </div>
+  <div class="footer-copy">© 2026 Foundry One Sciences LLC · All Rights Reserved · Delaware</div>
+</footer>
+</body>
+</html>
