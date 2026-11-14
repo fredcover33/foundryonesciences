@@ -1,0 +1,4 @@
+{
+  "_how_to_add": "Add one object per certified agency to the list below: {\"name\": \"Agency name\", \"city\": \"City\", \"state\": \"MD\", \"certified\": \"2026-11-20\"}. State is the two-letter code; certified is the date of the training call.",
+  "agencies": []
+}

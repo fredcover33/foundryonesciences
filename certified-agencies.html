@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Certified Companion Billing Agencies: billing agencies trained to receive and work from MRS Engine Chart Notes. Find a certified agency, or get yours certified.">
+<meta property="og:title" content="Certified Companion Billing Agencies — Foundry One Sciences">
+<meta property="og:description" content="These billing agencies know what a Chart Note is, what lands in their office, and what to do with it.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://foundryonesciences.com/certified-agencies.html">
+<title>Certified Companion Billing Agencies — Foundry One Sciences</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:    #080d1a;
+    --navy2:   #0d1426;
+    --navy3:   #111c35;
+    --gold:    #c9a558;
+    --gold2:   #e2c07a;
+    --white:   #f5f2ec;
+    --muted:   #8a96b0;
+    --border:  rgba(201,165,88,0.18);
+    --glow:    rgba(201,165,88,0.08);
+  }
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV (same as home page) ─── */
+  nav {
+    position: fixed; top:0; left:0; right:0; z-index: 100;
+    padding: 1.4rem 4rem;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(8,13,26,0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-brand { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.05rem;
+    letter-spacing: 0.28em; color: var(--white); text-transform: uppercase;
+  }
+  .nav-tagline {
+    font-family: 'Crimson Pro', serif; font-style: italic; font-size: 0.62rem;
+    color: var(--gold); letter-spacing: 0.08em; text-align: right; margin-top: 0.2rem;
+  }
+  .nav-links { display: flex; gap: 2.8rem; list-style: none; }
+  .nav-links a {
+    color: var(--muted); text-decoration: none; font-size: 0.72rem;
+    letter-spacing: 0.18em; text-transform: uppercase; transition: color 0.25s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+
+  /* ─── SHARED ─── */
+  .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 4rem; position: relative; z-index: 1; }
+  .section-label {
+    font-size: 0.62rem; letter-spacing: 0.38em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif; font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.1; color: var(--white);
+  }
+  .section-title em { font-style: italic; color: var(--gold2); }
+  .divider { width: 48px; height: 1px; background: var(--gold); margin: 1.8rem 0; opacity: 0.6; }
+  .btn-primary, .btn-outline {
+    display: inline-block; padding: 0.85rem 2.2rem;
+    font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.2em;
+    text-transform: uppercase; text-decoration: none; cursor: pointer;
+    transition: background 0.25s, border-color 0.25s, color 0.25s, transform 0.2s;
+  }
+  .btn-primary { background: var(--gold); color: var(--navy); font-weight: 500; border: none; }
+  .btn-primary:hover { background: var(--gold2); transform: translateY(-2px); }
+  .btn-outline { background: transparent; color: var(--gold); font-weight: 400; border: 1px solid var(--border); }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold2); transform: translateY(-2px); }
+  p.body {
+    font-family: 'Crimson Pro', serif; font-size: 1.22rem; line-height: 1.75;
+    color: rgba(245,242,236,0.82); max-width: 760px;
+  }
+  p.body + p.body { margin-top: 1.1rem; }
+
+  /* ─── HERO ─── */
+  #cert-hero { padding: 150px 0 70px; position: relative; }
+  #cert-hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 55% at 70% 40%, rgba(201,165,88,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-sub {
+    font-family: 'Crimson Pro', serif; font-style: italic; font-size: 1.35rem;
+    color: rgba(245,242,236,0.75); margin-top: 1.2rem; max-width: 680px; line-height: 1.6;
+  }
+
+  /* ─── VIDEO ─── */
+  .video-frame {
+    margin-top: 3rem; border: 1px solid var(--border); background: var(--navy2);
+    padding: 10px; max-width: 980px;
+  }
+  .video-frame video { display: block; width: 100%; height: auto; background: #000; }
+  .video-caption {
+    margin-top: 0.9rem; font-size: 0.72rem; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--muted);
+  }
+
+  /* ─── WHAT COMPANION DOES ─── */
+  section.band { padding: 90px 0; border-top: 1px solid var(--border); }
+
+  /* ─── LIST ─── */
+  .list-tools { display: flex; gap: 1rem; align-items: center; margin: 2rem 0 1.4rem; flex-wrap: wrap; }
+  .list-tools[hidden] { display: none; }
+  .list-tools label { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+  .list-tools select {
+    background: var(--navy2); color: var(--white); border: 1px solid var(--border);
+    padding: 0.6rem 1rem; font-family: 'Jost', sans-serif; font-size: 0.9rem;
+  }
+  table.agencies { width: 100%; max-width: 980px; border-collapse: collapse; }
+  table.agencies th {
+    text-align: left; font-weight: 400; font-size: 0.66rem; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--gold); padding: 0.9rem 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  table.agencies td {
+    padding: 1rem; border-bottom: 1px solid rgba(201,165,88,0.08);
+    font-size: 1rem; color: rgba(245,242,236,0.88);
+  }
+  .list-note {
+    max-width: 980px; padding: 2rem; border: 1px dashed var(--border);
+    font-family: 'Crimson Pro', serif; font-style: italic; font-size: 1.15rem;
+    color: rgba(245,242,236,0.75);
+  }
+  .list-note.error { border-color: rgba(220,120,100,0.6); color: #f0b4a6; font-style: normal; }
+
+  /* ─── CTA CARDS ─── */
+  .cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; max-width: 980px; }
+  .cta-card { border: 1px solid var(--border); background: var(--navy2); padding: 2.2rem; }
+  .cta-card .who { font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); }
+  .cta-card h3 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.7rem;
+    margin: 0.6rem 0 0.8rem; color: var(--white);
+  }
+  .cta-card p {
+    font-family: 'Crimson Pro', serif; font-size: 1.08rem; line-height: 1.65;
+    color: rgba(245,242,236,0.78); margin-bottom: 1.6rem;
+  }
+
+  /* ─── FOOTER ─── */
+  .disclaimer {
+    max-width: 980px; margin-top: 3rem; font-size: 0.78rem; line-height: 1.6;
+    color: var(--muted); opacity: 0.85;
+  }
+  footer {
+    padding: 2.5rem 4rem; border-top: 1px solid var(--border); margin-top: 90px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .footer-brand { display: flex; flex-direction: column; }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 0.85rem;
+    letter-spacing: 0.28em; text-transform: uppercase; color: var(--white);
+  }
+  .footer-tagline {
+    font-family: 'Crimson Pro', serif; font-style: italic; font-size: 0.62rem;
+    color: var(--gold); text-align: right; margin-top: 0.2rem;
+  }
+  .footer-copy { font-size: 0.65rem; letter-spacing: 0.1em; color: var(--muted); opacity: 0.5; }
+
+  @media (max-width: 900px) {
+    nav { padding: 1.2rem 1.5rem; }
+    .nav-links { display: none; }
+    .section-inner { padding: 0 1.5rem; }
+    #cert-hero { padding: 120px 0 50px; }
+    .cta-grid { grid-template-columns: 1fr; }
+    table.agencies th:nth-child(4), table.agencies td:nth-child(4) { display: none; }
+    footer { flex-direction: column; gap: 1rem; padding: 2rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">
+    <span class="nav-logo">Foundry One Sciences</span>
+    <span class="nav-tagline">...&nbsp; we have not stopped looking</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#products">Products</a></li>
+    <li><a href="index.html#about">HealthPassport™</a></li>
+    <li><a href="index.html#audiences">For You</a></li>
+    <li><a href="certified-agencies.html" class="active">Certified Agencies</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ─── HERO + VIDEO ─── -->
+<section id="cert-hero">
+  <div class="section-inner">
+    <div class="section-label">For billing agencies · For physicians</div>
+    <h1 class="section-title">Certified Companion<br><em>Billing Agencies</em></h1>
+    <p class="hero-sub">These billing agencies know what a Chart Note is, what lands in their office, and what to do with it.</p>
+
+    <div class="video-frame">
+      <video controls playsinline preload="metadata" poster="assets/companion-certified-agencies-poster.jpg">
+        <source src="assets/companion-certified-agencies.mp4" type="video/mp4">
+        Your browser can't play this video. <a href="assets/companion-certified-agencies.mp4" style="color:var(--gold)">Download it here.</a>
+      </video>
+    </div>
+    <div class="video-caption">What lands in your office — in two minutes.</div>
+  </div>
+</section>
+
+<!-- ─── WHAT COMPANION DOES ─── -->
+<section class="band" id="what-companion-does">
+  <div class="section-inner">
+    <div class="section-label">What Companion does</div>
+    <h2 class="section-title">The doctor's signed work,<br><em>straight to your office.</em></h2>
+    <div class="divider"></div>
+    <p class="body">Some patients have three or four things going on at once. The MRS Engine with Companion is built for them. The doctor enters the case, and the engine reads the published research across the specialties and writes a Chart Note.</p>
+    <p class="body">A Chart Note is a two-page summary of the case: what the research found, the sources behind it, and the billing signals. The doctor marks every signal himself and signs it. Then it goes straight to his billing agency, with a case number and never a patient's name.</p>
+    <p class="body">The doctor decides what goes on the Chart Note. The agency decides what to bill. Companion carries his signed work to your office, so you can see what he did and where it sits in his record.</p>
+  </div>
+</section>
+
+<!-- ─── THE LIST ─── -->
+<section class="band" id="find-an-agency">
+  <div class="section-inner">
+    <div class="section-label">The list</div>
+    <h2 class="section-title">Find a <em>certified agency</em></h2>
+    <div class="divider"></div>
+    <p class="body">Search by state. Every agency here has walked through a real Chart Note with us.</p>
+
+    <div class="list-tools" id="list-tools" hidden>
+      <label for="state-filter">State</label>
+      <select id="state-filter"><option value="">All states</option></select>
+    </div>
+    <div id="agency-list"><div class="list-note">Loading the list…</div></div>
+  </div>
+</section>
+
+<!-- ─── TWO BUTTONS ─── -->
+<section class="band" id="get-certified">
+  <div class="section-inner">
+    <div class="section-label">Next step</div>
+    <h2 class="section-title">Get certified, <em>or bring yours in.</em></h2>
+    <div class="cta-grid">
+      <div class="cta-card">
+        <div class="who">For billing agencies</div>
+        <h3>Get your agency certified</h3>
+        <p>It's a 15-minute call. We'll send you a real Chart Note and walk through it with you.</p>
+        <a class="btn-primary" href="mailto:fredcover@foundryonesciences.com?subject=Get%20my%20agency%20certified&body=Agency%20name%3A%0ACity%20and%20state%3A%0AYour%20name%20and%20role%3A%0ABest%20number%20to%20reach%20you%3A%0A">Get your agency certified</a>
+      </div>
+      <div class="cta-card">
+        <div class="who">For physicians</div>
+        <h3>Invite my agency</h3>
+        <p>Don't see your billing agency? Send us its name, and we'll reach out.</p>
+        <a class="btn-outline" href="mailto:fredcover@foundryonesciences.com?subject=Invite%20my%20billing%20agency&body=Your%20name%3A%0AYour%20practice%3A%0AYour%20billing%20agency%3A%0AAgency%20contact%2C%20if%20you%20know%20it%3A%0A">Invite my agency</a>
+      </div>
+    </div>
+
+    <p class="disclaimer">Billing and coding signals are research-supported documentation opportunities only. All clinical, billing and coding decisions remain the professional judgment of the treating physician and the billing agency.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">
+    <span class="footer-logo">Foundry One Sciences</span>
+    <span class="footer-tagline">...&nbsp; we have not stopped looking</span>
+  </div>
+  <div class="footer-copy">© 2026 Foundry One Sciences LLC · All Rights Reserved · Delaware</div>
+</footer>
+
+<script>
+// The list lives in agencies.json beside this page. An empty list and a list
+// that failed to load show different messages, so a broken file is never
+// mistaken for "no agencies yet".
+(function () {
+  const box = document.getElementById('agency-list');
+  const tools = document.getElementById('list-tools');
+  const filter = document.getElementById('state-filter');
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+  function fmtDate(iso) {
+    const d = new Date(iso + 'T12:00:00');
+    if (isNaN(d)) return 'date not given';
+    return d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+  }
+  function render(list) {
+    const st = filter.value;
+    const rows = list.filter(a => !st || a.state === st);
+    if (!rows.length) {
+      box.innerHTML = '<div class="list-note">No certified agency in that state yet. Invite yours below.</div>';
+      return;
+    }
+    box.innerHTML = '<table class="agencies"><thead><tr><th>Agency</th><th>City</th><th>State</th><th>Certified since</th></tr></thead><tbody>' +
+      rows.map(a => '<tr><td>' + esc(a.name) + '</td><td>' + esc(a.city) + '</td><td>' + esc(a.state) + '</td><td>' + esc(fmtDate(a.certified)) + '</td></tr>').join('') +
+      '</tbody></table>';
+  }
+
+  fetch('agencies.json', { cache: 'no-store' })
+    .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(data => {
+      if (!data || !Array.isArray(data.agencies)) throw new Error('agencies.json has no "agencies" list');
+      const list = data.agencies.slice().sort((a, b) => (a.state + a.name).localeCompare(b.state + b.name));
+      if (!list.length) {
+        box.innerHTML = '<div class="list-note">Our first agencies are being certified now. Check back soon, or invite yours below.</div>';
+        return;
+      }
+      [...new Set(list.map(a => a.state))].sort().forEach(s => {
+        const o = document.createElement('option'); o.value = s; o.textContent = s; filter.appendChild(o);
+      });
+      tools.hidden = false;
+      filter.addEventListener('change', () => render(list));
+      render(list);
+    })
+    .catch(err => {
+      box.innerHTML = '<div class="list-note error">The list didn\'t load (' + esc(err.message) + '). Please refresh the page.</div>';
+    });
+})();
+</script>
+</body>
+</html>
