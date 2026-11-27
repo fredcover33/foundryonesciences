@@ -1623,6 +1623,23 @@
 
 </style>
 <style id="nav-fit">@media (min-width: 901px) and (max-width: 1360px) { nav .nav-links { gap: 1.35rem; } nav .nav-links a { letter-spacing: 0.12em; } }</style>
+<style id="research-band">
+  /* ─── RESEARCH PORTAL BAND ─── */
+  #research-portal { padding: 7rem 0; border-top: 1px solid var(--border); }
+  .vault-band { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 3.5rem; align-items: center; }
+  .vault-band-pic { display: block; border: 1px solid var(--border); background: var(--navy2); padding: 10px; transition: border-color 0.3s, transform 0.3s; }
+  .vault-band-pic:hover { border-color: var(--gold); transform: translateY(-3px); }
+  .vault-band-pic img { display: block; width: 100%; height: auto; }
+  .vault-band-text p {
+    font-family: 'Crimson Pro', serif; font-size: 1.22rem; line-height: 1.75;
+    color: rgba(245,242,236,0.82); max-width: 520px;
+  }
+  .vault-band-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+  @media (max-width: 900px) {
+    #research-portal { padding: 4.5rem 0; }
+    .vault-band { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  }
+</style>
 </head>
 <body>
  
@@ -1744,6 +1761,25 @@
   </div>
 </section>
  
+<!-- ─── RESEARCH PORTAL ─── -->
+<section id="research-portal">
+  <div class="section-inner vault-band">
+    <a class="vault-band-pic reveal" href="research.html">
+      <img src="assets/research-portal-card.jpg" width="1920" height="1080" loading="lazy" alt="Inside an ancient library: painted hieroglyph pillars frame a hall of scroll shelves, and a single flame rises from the sand floor. The word Research sits beneath it.">
+    </a>
+    <div class="vault-band-text">
+      <div class="section-label reveal">The Research Portal · foundryonesciences.net</div>
+      <h2 class="section-title reveal">The vault <em>is open.</em></h2>
+      <div class="divider reveal"></div>
+      <p class="reveal">Medicine's record almost certainly holds a case like yours, and what happened next. The Research Portal is where you open that case: six doors, six questions, and a file you can check line by line.</p>
+      <div class="vault-band-btns reveal">
+        <a class="btn-primary" href="research.html">See the Research Portal</a>
+        <a class="btn-outline" href="https://foundryonesciences.net/">Enter foundryonesciences.net</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ─── HEALTHPASSPORT ─── -->
 <section id="about">
 
